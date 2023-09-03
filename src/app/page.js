@@ -19,17 +19,17 @@ function ImageTrack(){
     const movieName = filename.replace(".json","");
     return (
       <Link href={`/about/${movieName}`} key={movieName}>
-          <div className="flex-shrink-0 w-[300px] bg-neutral-800 rounded-[8px] border border-sky-900 transition-transform transform hover:scale-105">
+          <div className="flex-shrink-0 w-[100px] lg:w-[300px] h-[300px] lg:h-[275px] bg-neutral-800 rounded-[8px] border border-sky-900 transition-transform transform hover:scale-105">
             <div className="relative">
               <img
                 src={movie.posterUrl}
-                className="w-full object-cover h-[200px] rounded-t-[8px]"
+                className="w-full object-cover h-[100px] lg:h-[200px] rounded-t-[8px]"
                 alt={movie.title}
               />
 
               <div className="text-center text-orange-700">{movie.title}</div>
               <div className="text-center text-stone-500">Category: {movie.category}</div>
-              <div className='text-center text-yellow-500 border border-yellow-500 rounded-[8px]'>Rating: {movie.ageRating}</div>
+              <div className='text-center inset-x-0 bottom-0 text-yellow-500 border border-yellow-500 rounded-[8px]'>Rating: {movie.ageRating}</div>
             </div>
           </div>
       </Link>
