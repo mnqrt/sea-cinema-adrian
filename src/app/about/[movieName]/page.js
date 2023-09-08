@@ -11,10 +11,12 @@ export default function Users({ params }) {
         <img src={movieData.posterUrl} alt={movieData.title} className="w-1/2 h-1/3 opacity-80"/>
         <div className='flex gap-7'>
           <div className="w-100 h-7">{movieData.title}</div>
-          <button className='group relative w-20 rounded-lg bg-neutral-800 shadow'>
-            <span className='absolute inset-0 w-2 bg-yellow-500  rounded-lg transition-all duration-[500ms] ease-out group-hover:w-full'></span>
-            <div className='relative text-white hover:text-orange-700 font-bold'>Pesan</div>
-          </button>
+          <a href={`../../order/${movieTitle}`}>
+            <button className='group relative w-20 rounded-lg bg-neutral-800 shadow'>
+              <span className='absolute inset-0 w-2 bg-yellow-500  rounded-lg transition-all duration-[500ms] ease-out group-hover:w-full'></span>
+              <div className='relative text-white hover:text-orange-700 font-bold'>Pesan</div>
+            </button>
+          </a>
           {/* <button className='w-30vw bg-orange-600 border border-x-yellow-500 shadow rounded-lg'>Pesan</button> */}
           
         </div>
